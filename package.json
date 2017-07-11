@@ -1,0 +1,44 @@
+{
+  
+	"name": "yes",
+  
+
+	"version": "1.0.0",
+ 
+
+	 "description": "WebApp",
+ 
+
+	 "main": "start.js",
+ 
+	
+ 	"scripts": {
+   
+
+		 "test": "tes"
+ 
+	 },
+ 
+
+	 "repository": {
+
+
+	    "type": "git",
+  
+
+	    "url": "none"
+ 
+	 },
+ 
+
+ 	"keywords": [
+    "kk"
+  ],
+
+
+	"author": "rochak.ravi@gmail.com",
+  "license": "MIT"
+}
+
+
+
