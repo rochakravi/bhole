@@ -1,0 +1,83 @@
+<div ng-controller="profileCtrl" class="row">
+
+	<div class="col-sm-5">
+		
+		<input type="checkbox" ng-model="shw">Show Custor Filter example
+
+		<div ng-if="shw">
+			{{price}}
+
+		<div>
+			Custome filter Simple
+			<table>
+				<thead>
+					<tr>	
+						<th>City</th>
+						<th>Price</th>
+						<th>Url</th>
+						<th>Gender</th>
+						<th>Salary</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr ng-repeat="filterTest in customFilterTest">	
+						<td>{{filterTest.city}}</td>
+						<td>{{filterTest.price}}</td>
+						<td>{{filterTest.url}}</td>
+						<td>{{filterTest.gender }}</td>
+						<td>{{filterTest.salary}}</td>
+					</tr>
+				</tbody>
+
+			</table>
+		</div>
+
+			<h2>Profile</h2>
+			<input type="text" ng-model="name">
+			<button ng-click="add()">Apply</button>
+				{{msg}}
+			<ul>
+				<li ng-repeat="w in obj">{{w}}</li>
+			</ul>
+		</div><!--end of ng-if div -->
+
+	</div> <!--end of First div -->
+
+
+	<div class="col-sm-5">
+		<div class="card">
+  			<img src="image/user.jpg" alt="John" style="width:100%">
+  			<div class="content">
+  			<h1>Ravi Raj</h1>
+    		<p class="title">CEO & Founder, Mahadev</p>
+    		<p>Social Reformer, India</p>
+    		<div > <!-- style="margin: 24px 0;" -->
+      			<a href="#"><i class="fa fa-dribbble"></i></a> 
+      			<a href="#"><i class="fa fa-twitter"></i></a>  
+      			<a href="#"><i class="fa fa-linkedin"></i></a>  
+      			<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a> 
+   			</div>
+   			<p><button class="contactButton">Contact</button></p>
+  			</div>	
+		</div>
+		<div class="card">
+  			<img src="image/user.jpg" alt="John" style="width:100%">
+  			<div class="content">
+  			<h1>Ravi Raj</h1>
+    		<p class="title">CEO & Founder, Mahadev</p>
+    		<p>Social Reformer, India</p>
+    		<div > <!-- style="margin: 24px 0;" -->
+      			<a href="#"><i class="fa fa-dribbble"></i></a> 
+      			<a href="#"><i class="fa fa-twitter"></i></a>  
+      			<a href="#"><i class="fa fa-linkedin"></i></a>  
+      			<a href="#"><i class="fa fa-facebook"></i></a> 
+   			</div>
+   			<p><button class="contactButton">Contact</button></p>
+  			</div>	
+		</div>
+	</div><!--end of Second div -->
+
+</div>
+
+	

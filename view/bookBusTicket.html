@@ -1,0 +1,59 @@
+<div ng-controller="ticketCtrl">
+Custome filter Simple
+<select ng-model="selectedCity" ng-change="sortDataAsPerCity()">
+	<option>Select City</option>
+	<option value="delhi">Delhi</option>
+	<option value="mumbai">Mumbai</option>
+	<option value="Noida">Noida</option>
+</select>
+<table>
+	<thead>
+		<tr>	
+			<th>City</th>
+			<th>Price</th>
+			<th>Url</th>
+			<th>Gender</th>
+			<th>Salary</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr ng-repeat="serviceTest in servicesTest | filter:{city:'Noida'}">	
+			<td>{{serviceTest.city}}</td>
+			<td>{{serviceTest.price}}</td>
+			<td>{{serviceTest.url}}</td>
+			<td>{{serviceTest.gender |filterTest}}</td>
+			<td>{{serviceTest.salary |addRupees}}</td>
+		</tr>
+
+	</tbody>
+
+</table>
+
+obj format
+<table>
+	<thead>
+		<tr>	
+			<th>City</th>
+			<th>Price</th>
+			<th>Url</th>
+			<th>Gender</th>
+			<th>Salary</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr ng-repeat="(key,value) in servicesTest">	
+			<td>{{value.city}}</td>
+			<td>{{value.price}}</td>
+			<td>{{value.salary}}</td>
+			<td>{{value.gender |filterTest}}</td>
+			<td>{{value.salary |addRupees}}</td>
+			
+		</tr>
+
+	</tbody>
+
+</table>
+</div>
+

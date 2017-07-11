@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="listItems" ng-repeat="payment in payments">	
+		<div class="listMenu text-left">a</div>
+		<div class="listMenu text-right">b</div>		
+	</div><!--  end of menu list -->
+
+	<div class="leftContent">	<!--  start of menu content -->
+		<div ng-repeat="payment in payments">	
+			<div class="listMenu text-left">{{payment.counterparty}}</div>
+			<div class="listMenu text-right">{{payment.amount}}</div>	
+			<div class="listMenu text-left">{{payment.currency}}</div>
+			<div class="listMenu text-right">{{payment.valueDate}}</div>	
+			<div class="listMenu text-left">{{payment.creditAccount}}</div>				
+		</div>
+	</div><!--  end of menu content -->
+</div>
+
+
+

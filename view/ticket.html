@@ -1,0 +1,33 @@
+<div ng-controller="ticketCtrl">	
+	
+	<div class="row">
+
+		<div class="col-sm-2">
+			<h4>Book Cheap Tickets</h4>				
+		</div>
+
+		<div class="col-sm-2">
+			<a ui-sref=".flight" id="sublink" >Book Flight</a>				
+		</div>
+		
+		<div class="col-sm-2">
+			<a ui-sref=".train" id="sublink">Book Train</a>			
+		</div>
+			
+		<div class="col-sm-2">
+			<a ui-sref=".bus" id="sublink">Book Bus</a>
+			
+		</div>
+		
+		<div class="col-sm-2">
+			<a ui-sref=".hotel" id="sublink">Book Hotel</a>
+			
+		</div>
+		
+	</div>	
+
+	<div ui-view id="nestedView"></div>
+
+</div>
+	
+	

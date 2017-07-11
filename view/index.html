@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+  <head>
+    <script data-require="angular.js@1.4.8" data-semver="1.4.8" src=
+    "https://code.angularjs.org/1.4.8/angular.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+    <script src="myCtrl.js"></script>
+	<script src="mallCtrl.js"></script>
+	<script src="mallService.js"></script>
+	<script src="ticketCtrl.js"></script> 
+	<script src="ProfileCtrl.js"></script>
+	<script src="cartController.js"></script>
+	<script src="ticketService.js"></script> 
+	<script src="filters.js"></script>  
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="myStyle.css">
+
+		<!-- for profile card -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- for profile card -->
+
+	<!-- for sofia font -->
+	<!--<link href='//fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>-->
+	<link href='//fonts.googleapis.com/css?family=Allura' rel='stylesheet'>
+
+	<!-- for keyboard shortcuts -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+
+  </head>
+
+  <body>
+	<div ng-controller="myCtrl">
+			<nav class="navbar navbar-default" role="navigation">  
+				<div class="navbar-header ">
+					<button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand rotate grow" href="#">Hello Plunker!</a>
+				</div>
+				<div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
+		
+					<ul class="nav navbar-nav" >
+						<li><a ui-sref="mall" 
+								ng-click="conditionCartforMall = true ;"
+								ng-blur="conditionCartforMall = false ;"
+								>Mall</a></li>
+						<li><a ui-sref="ticket">Book Ticket</a></li>
+						<li><a ui-sref="profile">Profile</a></li>	
+						<li ng-show="conditionCartforMall"><a ui-sref="cart"><i class="glyphicon glyphicon-shopping-cart pull-right"></i></a></li>	
+						<li><a ui-sref="authorization"><i class="glyphicon glyphicon-user  pull-right"></i></a></li>
+
+						<li>
+							<div class="desktop-user">
+								<div class="desktop-userIconsContainer" >
+									<span class="myntraweb-sprite desktop-iconUser sprites-user">
+										
+									</span>
+
+									<span class="myntraweb-sprite desktop-caret sprites-caret">
+										
+									</span>
+								</div>
+
+								<div class="desktop-userActions" data-reactid="444">
+									<div class="desktop-userActionsArrow" data-reactid="445"></div>
+
+									<div class="desktop-userActionsContent" data-reactid="446">
+										<div class="desktop-contentInfo" data-reactid="447">
+											<a href="" data-track="edit_profile" class="desktop-uaProfileLink" data-reactid="448">
+											
+											</a>
+										</div>
+
+										<div class="desktop-getUserInLinks desktop-getInLinks" data-reactid="451">
+
+										<a ui-sref="register" data-track="signup" class="desktop-linkButton" data-reactid="452">Sign up</a>
+
+										<a ui-sref="login" data-track="login" class="desktop-linkButton" data-reactid="453">login</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+						</li>
+						
+
+	</div>	
+					</ul>
+			
+				</div>		
+			</nav>	
+	</div><!-- end of myCtrl -->
+
+	<div ui-view id="container"></div>
+		
+
+	<div id="footer">
+		<p>Footer </p>
+
+	</div>
+	
+  </body>
+
+</html>
+
+
+
+
+

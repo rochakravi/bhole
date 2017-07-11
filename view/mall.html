@@ -1,0 +1,29 @@
+<div ng-controller="mallCtrl" class="row ">
+	<div>
+		<p>Mall </p>
+		<input type="checkbox" ng-model="mallData"><label>Show Mall Data</label>
+	</div>
+	
+	<div ng-if="mallData">
+		<div class="text-center">
+		<button ng-hide="currentPage == 0" ng-click="currentPage=currentPage-1"> <!--ng-disabled -->
+			&laquo</button>
+			{{currentPage+1}}/{{numberOfPages()}}
+		<button ng-hide="currentPage >= mallSerCheck.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+			&raquo</button>
+		</div>
+		<ul class="list-group text-center ">
+			<li ng-repeat="x in mallSerCheck | startFrom:currentPage*pageSize| limitTo:pageSize" class="list-group-item ">
+
+			{{x.id}}|{{x.type}}|{{x.url}}</li> 
+
+		</ul>	
+
+	</div>
+
+	<div id="directiveTest">Directive Test
+	<div my-directive-mall="{{ customer.name }}"></div>
+	<div my-directive-mall-second></div>
+	</div>
+
+</div> <!-- end controller div -->

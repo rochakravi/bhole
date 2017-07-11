@@ -1,0 +1,83 @@
+<div ng-controller="myCtrl as ctrl">
+	<input type="checkbox" ng-model="myVar" > Show Available Offers
+
+	<!-- <div ng-if="myVar">
+		<h4>Available Offers</h4>
+		<ul class="list-group row">
+			<li ng-repeat="da in offers" class="list-group-item "> <!-- style="padding-bottom: 40px;padding-top: 24px; 
+				<img ng-src="{{da.url}}" />
+			</li>
+		</ul>
+	</div>
+ -->
+ 	<div ng-if="myVar" class="mallDiv">
+		<h4>Available Offers</h4>
+		<div id="phonesAndtablets" style="height : 600px">
+		
+		<ul class="list-inline">
+			<a href="#">&laquo;</a>
+			<li ng-repeat="da in offers |limitTo:10" class="view hm-zoom "> <!-- style="padding-bottom: 40px;padding-top: 24px; -->
+				<div class="view hm-zoom">
+					 
+    				<img ng-src="{{da.url}}" class="img-fluid grow " alt=""> 
+
+				</div>
+				<!-- <img class="img-fluid" ng-src="{{da.url}}"/> -->
+				<div>
+				{{da.brand}}
+				</div>
+				<div style="color:green">
+				{{da.offer}}
+				</div>
+				<div>
+				{{da.now|addToRuppes}}
+				</div>
+			</li>	
+			<a href="#">&raquo;</a>		
+		</ul>
+
+		</div>
+	</div>
+
+	<input type="checkbox" ng-model="cusDirEx"/><label>Custom Directive</label>
+	<div ng-repeat="bla in ctrl.items" ng-if="cusDirEx">
+				<item-widget item="bla" promo="Christmas-Sale" on-select="ctrl.onItemSelect(selectedItem)"></item-widget>
+	</div>
+	<!-- <div ng-if="myVar">
+		<h4>Available Offers</h4>
+		<ul class="list-group">
+			<li ng-repeat="da in offers" class="list-group-item"> <!-- style="padding-bottom: 40px;padding-top: 24px; 
+					<div>
+						<ul class="row">
+							<li class="col-sm-3">{{da.brand}}</li>
+							<li class="col-sm-3">{{da.percentage}}</li>
+							<li class="col-sm-3">{{da.lastDate}}</li>
+							<li class="col-sm-3"><img src="{{da.url}}"</li>
+
+						</ul>
+					</div>
+			</li>
+		</ul>
+
+	</div> -->
+
+	<ul class="list-group">
+  <li class="list-group-item">New <span class="badge">12</span></li>
+  <li class="list-group-item">Deleted <span class="badge">5</span></li> 
+  <li class="list-group-item">Warnings <span class="badge">3</span></li> 
+</ul>
+
+<!-- nested controller check -->
+<div class="row">
+	<div ng-controller="one" class="col-md-4">
+		<button ui-sref=".one">Controller One</button>
+		{{msg}}
+	</div>
+	<!-- <div ng-controller="two" class="col-md-4">
+		<button>Controller two</button>
+	</div> -->
+</div>
+
+</div>
+
+		

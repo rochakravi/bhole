@@ -1,0 +1,44 @@
+<div>
+	<div  class="menuApp leftmenu" >
+		<ul class="klinks">
+			<li ng-repeat="payment in payments" class="menuList" ng-click="showForm(payment.id);myVar=true">
+				<a ui-sref=".{{payment.counterparty}}">
+					<div class="listMenu text-left">{{payment.counterparty}}</div>
+					<div class="listMenu text-right">{{payment.valueDate}}</div>
+				</a>
+			</li>
+		</ul>
+	</div><!--  end of menu list -->
+
+	<article  class="menuApp">
+  		<div ng-show="myVar">
+            <div>
+              <label>Counterparty</label>
+              <input type="text" value=value={{payment.valueDate}} />
+            </div>
+            <div>
+              <label>Value Date</label>
+              <input type="text" value=value={{payment.amount}} />
+            </div>
+            <div>
+              <label>Credit Account</label>
+              <input type="text" value=value={{payment.currency}} />
+            </div>
+            <div>
+              <label>Amount</label>
+              <input type="text" value=value={{payment.valueDate}} />
+            </div>
+            <div>
+              <label>Currency</label>
+              <input type="text" value=value={{payment.creditAccount}} />
+            </div>
+            <div>
+              <button >Save</button>
+              <button >Cancel</button>
+              <button>Delete</button>
+            </div>
+    	</div>		 		
+	</article>
+	
+</div>
+
